@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Recipes from "./components/Recipes";
+import Recipe from "./components/Recipe";
 function App() {
   const [assets, setAssets] = useState([]);
   useEffect(() => {
@@ -10,7 +10,6 @@ function App() {
         `https://preview.contentful.com/spaces/6did8bhz0z37/environments/master/entries?access_token=kGj7JMivsAvCApuLy8ILXUYSq0pjNUmorIhF1-FztxA`
       )
       .then((response) => {
-        console.log(response.data.items);
         setAssets(response.data.items);
       })
       .catch((err) => console.log(err));
@@ -18,8 +17,10 @@ function App() {
   return (
     <div className="App">
       {assets &&
-        assets.map((recipes) => {
-          return <Recipes recipe={recipes} key={recipes.sys.id} />;
+        assets.map((recipeCollection) => {
+          return (
+            <Recipe recipe={recipeCollection} key={recipeCollection.sys.id} />
+          );
         })}
     </div>
   );
