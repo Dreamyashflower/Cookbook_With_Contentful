@@ -27,7 +27,7 @@
 }
 
 .hrLine {
-    width: 35%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     height: 10px;
@@ -64,7 +64,7 @@
 
 .recipeFlex {
     float: left;
-    width: 35%;
+    width: 36%;
     position: relative;
 }
 
@@ -75,6 +75,7 @@
     text-align: left;
     vertical-align: text-top;
     margin-top: -50%;
+    line-height: 30px;
 
 }
 
@@ -82,9 +83,9 @@
     width: 5%;
     margin-left: auto;
     margin-right: auto;
-    height: 10px;
+    height: 5px;
     background-color: black;
-    margin-top: 4rem;
+    margin-top: 7rem;
 }
 
 
@@ -94,7 +95,7 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --nav-width: 10em;
+    --nav-width: 14em;
     --brigth: #BDD1C5;
     --brightest: #f7f6fb;
     --font: sans-serif;
@@ -137,7 +138,9 @@ a {
     font-size: 2em;
     font-family: 'Oi', cursive;
     color: black;
-
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .home,
@@ -145,7 +148,7 @@ a {
     display: grid;
     align-items: center;
     column-gap: 1em;
-    padding: 0.5em 0 0.5em 1.5em;
+    padding-left: 1.5rem;
     
 }
 
