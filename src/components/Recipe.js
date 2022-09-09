@@ -16,9 +16,10 @@ function Recipe({ recipe }) {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div>
-      <h1>{recipe.fields.title}</h1>
-      <img src={image.fields?.file.url} alt={image.title} height={300} />
+    <div className='recipeDiv'>
+      <h1 className='recipeTitle'>{recipe.fields.title}</h1>
+      <h2 className='recipeDesc'>{recipe.fields.description}</h2>
+      <img src={image.fields?.file.url} alt={image.title} width='600' className='recipeImage'/>
       <p>{recipe.fields.ingretientsTable}</p>
       <ol>{recipe.fields.preparation}</ol>
     </div>

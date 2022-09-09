@@ -16,6 +16,8 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <h2 className='subHeader'>the ultimate online cookbook</h2>
+      <h1 className='titleHeader'>nom nom</h1>
       {assets &&
         assets.map((recipeCollection) => {
           return (
