@@ -19,9 +19,20 @@ function Recipe({ recipe }) {
     <div className='recipeDiv'>
       <h1 className='recipeTitle'>{recipe.fields.title}</h1>
       <h2 className='recipeDesc'>{recipe.fields.description}</h2>
-      <img src={image.fields?.file.url} alt={image.title} width='600' className='recipeImage'/>
+      <div className='recipeCol'>
+
+        <div className='recipeFlex'>
+          <img src={image.fields?.file.url} alt={image.title} width='600' className='recipeImage'/>
+        </div>
+
+        <div className='recipeFlex'>
+          <p className='recipePrep'>{recipe.fields.preparation}</p>
+        </div>
+
+      </div>
       <p>{recipe.fields.ingretientsTable}</p>
-      <ol>{recipe.fields.preparation}</ol>
+      <hr className='hrLine2'></hr>
+
     </div>
   );
 }
