@@ -19,7 +19,10 @@ function App() {
       {assets &&
         assets.map((recipeCollection) => {
           return (
-            <Recipe recipe={recipeCollection} key={recipeCollection.sys.id} />
+            <>
+              <Recipe recipe={recipeCollection} key={recipeCollection.sys.id} />
+              
+            </>
           );
         })}
     </div>
