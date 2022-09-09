@@ -29,10 +29,11 @@ return (
 
         <div className='recipeFlex'>
           <p className='recipePrep'>{recipe.fields.preparation}</p>
+          <IngredientsTable className='recipeTable' recipe={recipe}/>
         </div>
 
       </div>
- <IngredientsTable recipe={recipe}/>
+      
       <hr className='hrLine2'></hr>
 
     </div>
