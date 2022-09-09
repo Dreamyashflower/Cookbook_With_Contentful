@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import IngredientsTable from "./IngredientsTable";
 
 function Recipe({ recipe }) {
   const [image, setImage] = useState({});
@@ -15,7 +16,8 @@ function Recipe({ recipe }) {
       })
       .catch((err) => console.log(err));
   }, []);
-  return (
+
+return (
     <div className='recipeDiv'>
       <h1 className='recipeTitle'>{recipe.fields.title}</h1>
       <h2 className='recipeDesc'>{recipe.fields.description}</h2>
@@ -30,7 +32,7 @@ function Recipe({ recipe }) {
         </div>
 
       </div>
-      <p>{recipe.fields.ingretientsTable}</p>
+ <IngredientsTable recipe={recipe}/>
       <hr className='hrLine2'></hr>
 
     </div>
